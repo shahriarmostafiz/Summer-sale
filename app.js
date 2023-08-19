@@ -21,6 +21,7 @@ function addToCart(data) {
   p.innerHTML = `${count}  ${itemTitle} `;
   p.classList.add("text-2xl", "font-medium");
   cartDiv.appendChild(p);
+  //   checking total
   if (newTotal >= 200) {
     const applyButton = document.getElementById("apply-button");
     applyButton.removeAttribute("disabled");
