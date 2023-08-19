@@ -17,8 +17,7 @@ function addToCart(data) {
   const p = document.createElement("p");
   const count = cartDiv.childElementCount + 1;
   const itemTitle = data.childNodes[7].innerText;
-  console.log(itemTitle);
-  p.innerHTML = `${count}  ${itemTitle} `;
+  p.innerHTML = `${count}. ${itemTitle} `;
   p.classList.add("text-2xl", "font-medium");
   cartDiv.appendChild(p);
   //   checking total
@@ -58,7 +57,6 @@ function discountAdded() {
     discountElement.innerText = discount;
     finalTotalElement.innerText = finalTotal;
   } else {
-    alert("invalid coupon");
     return;
   }
 }
