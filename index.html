@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A5-SSLP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              primary: "#E527B2",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <header>
+      <!-- banner section  -->
+      <div
+        class="bg-[#F9F6E2] flex flex-col md:flex-row justify-center items-center"
+      >
+        <!-- banner text-section  -->
+        <div class="text-center flex-1 my-8 md:my-4">
+          <h3 class="text-lg lg:text-3xl">---SALE FEVER---</h3>
+          <h1 class="text-3xl lg:text-6xl font-bold md:mt-11 my-8 md:mb-16">
+            Purchase TK 200 or <br />
+            above & get <span class="text-primary"> 20% off </span>
+          </h1>
+          <p class="text-xl md:text-2xl">
+            Use Promo Code
+            <span
+              class="bg-primary px-4 py-2 rounded-lg text-white font-semibold"
+              >SELL200</span
+            >
+          </p>
+        </div>
+        <!-- banner img  -->
+        <div class="">
+          <img src="./images/Summer 1.png" class="w-full" alt="" />
+        </div>
+      </div>
+    </header>
+    <main class="container mx-auto">
+      <!-- cards section  -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div onclick="addtoCart(this)"></div>
+      </section>
+      <!-- coupon and cart  section  -->
+      <section>
+        <!-- coupon section  -->
+        <div></div>
+        <!-- total section  -->
+        <div></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
