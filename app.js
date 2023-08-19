@@ -21,7 +21,6 @@ function addToCart(data) {
   p.innerHTML = `${count}  ${itemTitle} `;
   p.classList.add("text-2xl", "font-medium");
   cartDiv.appendChild(p);
-
   if (newTotal >= 200) {
     const applyButton = document.getElementById("apply-button");
     applyButton.removeAttribute("disabled");
@@ -35,14 +34,13 @@ function getTextElementValueById(id) {
 }
 
 function resetPage() {
-  //   location.reload();
+  // reseting the values
   document.getElementById("total-price").innerText = "00";
   document.getElementById("final-total").innerText = "00";
   document.getElementById("discount").innerText = "00";
-
   const cartDiv = document.getElementById("cart-items");
   cartDiv.style.display = "none";
-
+  //   reseting the page
   location.reload();
 }
 function discountAdded() {
@@ -51,7 +49,6 @@ function discountAdded() {
   const couponCode = couponCodeElement.value;
   const discountElement = document.getElementById("discount");
   const finalTotalElement = document.getElementById("final-total");
-
   if (couponCode === "SELL200") {
     const discountValue = (total * 20) / 100;
     const discount = discountValue.toFixed(2);
@@ -59,5 +56,8 @@ function discountAdded() {
     finalTotal = finalTotalValue.toFixed(2);
     discountElement.innerText = discount;
     finalTotalElement.innerText = finalTotal;
+  } else {
+    alert("invalid coupon");
+    return;
   }
 }
