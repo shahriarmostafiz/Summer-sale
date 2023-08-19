@@ -59,6 +59,5 @@ function discountAdded() {
     finalTotal = finalTotalValue.toFixed(2);
     discountElement.innerText = discount;
     finalTotalElement.innerText = finalTotal;
-  } else {
   }
 }
