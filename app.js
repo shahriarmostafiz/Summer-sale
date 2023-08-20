@@ -10,8 +10,8 @@ function addToCart(data) {
     purcharseButton.removeAttribute("disabled");
   }
   //   setting the total price
-  document.getElementById("total-price").innerText = newTotal;
-  document.getElementById("final-total").innerText = newTotal;
+  document.getElementById("total-price").innerText = newTotal + " TK";
+  document.getElementById("final-total").innerText = newTotal + " TK";
   //   updating the cart
   const cartDiv = document.getElementById("cart-items");
   const p = document.createElement("p");
@@ -54,8 +54,8 @@ function discountAdded() {
     const discount = discountValue.toFixed(2);
     const finalTotalValue = total - discount;
     finalTotal = finalTotalValue.toFixed(2);
-    discountElement.innerText = discount;
-    finalTotalElement.innerText = finalTotal;
+    discountElement.innerText = discount + "  TK";
+    finalTotalElement.innerText = finalTotal + "  TK";
   } else {
     return;
   }
